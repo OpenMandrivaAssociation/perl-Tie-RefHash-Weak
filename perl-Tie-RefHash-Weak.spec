@@ -1,15 +1,13 @@
 %define upstream_name    Tie-RefHash-Weak
-%define upstream_version 0.09
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.09
+Release:	7
 
 Summary:	A Tie::RefHash subclass with weakened references in the keys
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Tie-RefHash-Weak
-Source0:	https://cpan.metacpan.org/authors/id/N/NU/NUFFIN/Tie-RefHash-Weak-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/N/NU/NUFFIN/Tie-RefHash-Weak-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -33,7 +31,7 @@ ones. The values are left unaltered, and you'll have to make sure there are
 no strong references there yourself.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
